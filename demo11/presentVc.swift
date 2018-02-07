@@ -12,7 +12,7 @@ import UIKit
 class presentVc: UIViewController {
     @IBOutlet weak var pic: UIImageView!
     @IBOutlet weak var xButton: UIButton!
-    var addButton: UIBarButtonItem = UIBarButtonItem(title: "test", style: .done, target: self, action: #selector(addTapped))
+//    var addButton: UIBarButtonItem = UIBarButtonItem(title: "test", style: .done, target: self, action: #selector(addTapped))
     
     @IBAction func re(_ sender: UIButton) {
         self.dismiss(animated: false)
@@ -37,9 +37,9 @@ class presentVc: UIViewController {
 //        }
      
     }
-    @objc func addTapped(sender: AnyObject) {
-        print("hjxdbsdhjbv")
-    }
+//    @objc func addTapped(sender: AnyObject) {
+//        print("hjxdbsdhjbv")
+//    }
     override func viewDidAppear(_ animated: Bool) {
         xButton.isHidden = false
     }
