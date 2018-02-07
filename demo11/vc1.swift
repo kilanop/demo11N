@@ -16,7 +16,7 @@ class vc1: UIViewController {
         
 //        vc.changBtnStatus(mode: 1)
         
-        self.present(vc, animated: true) {
+        self.present(vc, animated: false) {
             print("present")
             vc.pic.image = UIImage(named: "candyhouse")
         }

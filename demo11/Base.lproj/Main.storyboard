@@ -36,6 +36,7 @@
                     </view>
                     <connections>
                         <outlet property="pic" destination="V3Y-Re-jHp" id="aM3-qt-0PS"/>
+                        <outlet property="xButton" destination="87v-74-uxh" id="pXb-Oj-XDn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3A-yT-0xA" userLabel="First Responder" sceneMemberID="firstResponder"/>

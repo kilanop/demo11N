@@ -11,10 +11,11 @@ import UIKit
 
 class presentVc: UIViewController {
     @IBOutlet weak var pic: UIImageView!
-    
+    @IBOutlet weak var xButton: UIButton!
+    var addButton: UIBarButtonItem = UIBarButtonItem(title: "test", style: .done, target: self, action: #selector(addTapped))
     
     @IBAction func re(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        self.dismiss(animated: false)
         {
             print("dismiss")
         }
@@ -24,14 +25,41 @@ class presentVc: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        xButton.isHidden = true
+//        let boool = true
+//        if boool
+//        {
+//            self.navigationItem.rightBarButtonItem = self.addButton
+//        }
+//        else
+//        {
+//            self.navigationItem.rightBarButtonItem = nil
+//        }
+     
     }
-
+    @objc func addTapped(sender: AnyObject) {
+        print("hjxdbsdhjbv")
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        xButton.isHidden = false
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+     
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {//在進到下一個view 之前
+        self.navigationItem.backBarButtonItem?.title = "Back"
+        //改變navigationBar裡面的Button的title
+        self.navigationItem.rightBarButtonItem?.title = "HI"
+    }
 
+    
+    
+   
+    
+    
     /*
     // MARK: - Navigation
 
